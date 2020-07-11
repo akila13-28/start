@@ -1,0 +1,95 @@
+{% extends "blog/base.html" %}
+{% load static%}
+{% block title%} Sustainable fashion  {% endblock %}
+
+{% block content%}
+<div class="features-blue">
+<div class="container">
+    <div class="intro">
+        <h2 class="text-center" style="font-family: 'Lemonada', cursive;">Sustainable Fashion Toolkit </h2>
+        <p class="text-center"></p>
+        <h3 class="text-center">Card Types</h3>
+    </div>
+    <div class="col" id="choice"><a href="choice"><button class="button" style="vertical-align:middle ;padding-top: 0;padding-bottom: 0;margin-left:90%;margin-top:-10%;font-size:20px;color:white;"><span>Select the cards</span></button></a></div>
+
+        
+    <div class="row">
+        <div class="col-sm-6 col-md-4 item"><i class="fa fa-map-marker icon"></i>
+            <h3 class="name">Choice</h3>
+            <p class="description">The choice pattern considers Life span of products.</p>
+        </div>
+        <div class="col-sm-6 col-md-4 item"><i class="fa fa-clock-o icon"></i>
+            <h3 class="name">Optimization</h3>
+            <p class="description">The optimization pattern seek ways to maximise the positive impact of the product idea of the re-imagination of the clothing life cycle system,turning it upside down,merging,skipping,segmenting,suggesting flexibile manufacturing systems
+                and alternative services.</p>
+        </div>
+        <div class="col-sm-6 col-md-4 item"><i class="fa fa-list-alt icon"></i>
+            <h3 class="name">Empowerment</h3>
+            <p class="description">The Empowerment patterns creates meaningful relationships with the user in the design process and encouraging the user to rethink the behaviour.</p>
+        </div>
+    </div>
+   <div class="row">
+        <div class="col-sm-6 col-md-4 item"  ><i class="fa fa-leaf icon"></i>
+            <h3 class="name">Persuasion</h3>
+            <p class="description">The persuasion patterns raise awareness of the issues for motivating people in sustainable fashion and textiles through interactive engagements.</p>
+        </div>
+        <div class="col-sm-6 col-md-4 item"><i class="fa fa-plane icon"></i>
+            <h3 class="name">Interaction</h3>
+            <p class="description">Disruptive innovation through IOT and wearable technology.</p>
+        </div>
+        <div class="col-sm-6 col-md-4 item"><i class="fa fa-phone icon"></i>
+            <h3 class="name">Social Conversation</h3>
+            <p class="description">Social conversation patterns seeks to find solutions through social networks and social innovation that enable individuals or communitites to build symbolic synergy to tackle social challenges.</p>
+        </div>
+        
+    </div>
+</div>
+</div>
+{% endblock %}
+{% block style %}
+<link href="{% static 'Features-Blue.css' %}" rel="stylesheet">
+<style>
+    
+.button {
+    display: inline-block;
+    border-radius: 35px;
+    background: linear-gradient(135deg, #172a74, #21a9af);
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 220px;
+    height:50px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 2px;
+    
+    }
+    
+    .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    }
+    
+    .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+    }
+    
+    .button:hover span {
+    padding-right: 25px;
+    }
+    
+    .button:hover span:after {
+    opacity: 1;
+    right: 0;
+    }
+</style>
+{% endblock %}    

@@ -1,0 +1,141 @@
+.features-blue {
+    color: #fff;
+    background: linear-gradient(135deg, #172a74, #21a9af);
+    background-color: #184e8e;
+    padding-bottom: 30px;
+  }
+  
+  @media (max-width:767px) {
+    .features-blue {
+      padding-bottom: 10px;
+    }
+  }
+  
+  .features-blue p {
+    color: rgba(255,255,255,0.6);
+  }
+  
+  .features-blue h2 {
+    font-weight: bold;
+    margin-bottom: 40px;
+    padding-top: 40px;
+    color: inherit;
+  }
+  
+  @media (max-width:767px) {
+    .features-blue h2 {
+      margin-bottom: 25px;
+      padding-top: 25px;
+      font-size: 24px;
+    }
+  }
+  
+  .features-blue .intro {
+    font-size: 16px;
+    max-width: 500px;
+    margin: 0 auto 60px;
+  }
+  
+  @media (max-width:767px) {
+    .features-blue .intro {
+      margin-bottom: 40px;
+    }
+  }
+  
+  .features-blue .item {
+    min-height: 100px;
+    padding-left: 80px;
+    margin-bottom: 40px;
+  }
+  
+  @media (max-width:767px) {
+    .features-blue .item {
+      min-height: 0;
+    }
+  }
+  
+  .features-blue .item .name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: inherit;
+  }
+  
+  .features-blue .item .description {
+    font-size: 15px;
+    margin-bottom: 0;
+  
+  }
+  
+  .features-blue .item .icon {
+    font-size: 40px;
+    color: #ffcc1e;
+    float: left;
+    margin-left: -65px;
+  }
+  
+  html {
+    font-family: fantasy;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    /*-webkit-tap-highlight-color: transparent;*/
+  }
+  
+  body {
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+  }
+  div.column{
+  float : left;
+  
+  }
+  
+  
+.button {
+    display: inline-block;
+    border-radius: 35px;
+    background: linear-gradient(135deg, #172a74, #21a9af);
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 220px;
+    height:50px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 2px;
+  
+  }
+  
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }

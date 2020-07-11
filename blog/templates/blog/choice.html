@@ -1,0 +1,106 @@
+{% extends "blog/base.html" %}
+{% load static%}
+
+    <title>Choice</title>
+
+    {%block style %}
+    <link href="{% static 'test1.css' %}" rel="stylesheet">
+    <style>
+    body{
+     background: linear-gradient(to top left, #336699 0%, #00ff99 98%);
+     background-image:url("{% static 'images/b1.jpg'%}");
+     background-repeat:no-repeat;
+     background-size:cover;
+    }</style>
+{% endblock %}
+
+
+{% block content %} 
+    <nav><a href="cart.html">
+    <button class="b1" style="vertical-align:middle ;padding-top: 0;padding-bottom: 0;margin-left:80%;margin-top:10px;margin-bottom:3%;font-family: 'Brush Script MT';">
+        <span><b>Idea Board</b></span></button>
+    </a></nav>
+    <h2 class="text-center" style="font-family: 'Metal Mania', cursive; font-size:75px; color:orange;margin-left:10px;margin-top:-100px;"><b>Choice</b></h2>
+    <div class="container">
+        <div class="row">
+            {% for index in choice%}
+            <div class="col" style="display: block;">
+                <section class="flipContainer">
+                <div class="card">
+                    <button class="js-click"><i class="fa fa-info-circle " style="font-size:24px; color:black;"></i></button>
+                    <div class="front">
+                        <div class="w3-card-4" style="width:100%;height:25px">
+                            <header class="w3-container w3-orange"style="text-align=center;">
+                                <h3>{{index.catagory}}</h3>
+                            </header>
+                            <img src="{{index.image.url}}" alt="" width="250" height="150">
+                            <div class="w3-container">
+                                <p style="color:black;"><b>{{index.question}}</b></p>
+                            </div><br><br><br><br><br><br><br><br><br><br><br><br>
+                            <footer class="w3-container w3-white">
+                            <button class="w3-button w3-block w3-orange">Add to ideaboard</button>
+                        </footer>
+                        </div>
+                    </div>
+                    <div class="back"> <header class="w3-container w3-orange">
+                        <h3>Description</h3>
+                    </header>
+                        <div class="w3-container">
+                            <p style="color:black;"class="p1"><b>{{index.description}}</b></p>
+                        </div></div>
+                </div></section>
+            </div>
+            {%endfor%}
+        </div>
+    </div>
+  
+    <div class="pagination">
+        <a href="card" style="margin-top:20px;">❮</a>
+        <a class="tab" href="optimisation" style="margin-top:20px;">❯</a>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            {% for index in choice1%}
+            <div class="col">
+                <section class="flipContainer">
+                <div class="card">
+                    <button class="js-click"><i class="fa fa-info-circle " style="font-size:24px; color:white"></i></button>
+                    <div class="front">
+                    <div class="w3-card-4" style="width:100%;height:25px">
+
+                        <header class="w3-container w3-orange"style="text-align=center;">
+                            <h3>{{index.catagory}}</h3>
+                        </header>
+                        <img src="{{index.image.url}}" alt="" width="250" height="150">
+                        <div class="w3-container">
+                            <p style="color:black;"><b>{{index.question}}</b></p>
+                        </div>
+                        <footer class="w3-container w3-white">
+                        <button type="button" class="w3-button w3-block w3-orange addtoideaboard">Add to ideaboard</button>
+                        <button class="b1">
+                            <b>add to Idea Board</b></button>
+
+                    </footer>
+                    </div>
+                    </div>
+                    <div class="back"> <header class="w3-container w3-orange">
+                        <h3>Description</h3>
+                    </header>
+                        <div class="w3-container">
+                            <p style="color:black;"class="p1"><b>{{index.description}}</b></p>
+                        </div></div>
+                </div></section>
+            </div>
+            {%endfor%}
+        </div>
+    </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+$('.js-click').on('click', function() {
+    console.log("clicked");
+  $(this).parent('.card').toggleClass('flipped');
+});</script> 
+
+{% endblock %}
