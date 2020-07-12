@@ -1,20 +1,20 @@
 {% extends "blog/base.html" %}
 {% load static%}
 
-    <title>Choice</title>
+    <title>optimisation</title>
 
     {%block style %}
     <link href="{% static 'test1.css' %}" rel="stylesheet">
     <style>
     body{
      background: linear-gradient(to top left, #336699 0%, #00ff99 98%);
-     background-image:url("{% static 'b1.jpg'%}");
+     background-image:url("{% static 'b2.jpg'%}");
      background-repeat:no-repeat;
      background-size:cover;
     }
     
     h3{
-        background-color: orange;
+        background-color: green;
     }
    </style>
 {% endblock %}
@@ -22,10 +22,10 @@
 
 {% block content %} 
     <nav><a href="cart.html">
-    <button class="b1" style="vertical-align:middle ;padding-top: 0;padding-bottom: 0;margin-left:80%;margin-top:10px;margin-bottom:3%;font-family: 'Brush Script MT';">
+    <button class="b1" style="vertical-align:middle ;background-color:green;padding-top: 0;padding-bottom: 0;margin-left:80%;margin-top:10px;margin-bottom:3%;font-family: 'Brush Script MT';">
         <span><b>Idea Board</b></span></button>
     </a></nav>
-    <h2 class="text-center" style="font-family: 'Metal Mania', cursive; font-size:75px; color:orange;margin-left:10px;margin-top:-100px;"><b>Choice</b></h2>
+    <h2 class="text-center" style="font-family: 'Metal Mania', cursive; font-size:75px; color:green;margin-left:10px;margin-top:-100px;"><b>optimisation</b></h2>
     <div class="container">
         <div class="row">
             {% for index in choice%}
@@ -39,11 +39,7 @@
                             <img src="{{index.image.url}}" alt="" width="250" height="150">
                     <div> <p style="color:black;"><b>{{index.question}}</b></p></div><br><br><br><br><br><br><br><br><br><br><br>                   
                             <centre>
-                                <div>
-                                    <!-- <form method='POST' action=""> -->
-                                        <button class="b1" style="font-size: 1em;" onclick="{% view 'selection' %}">Add to ideaboard</button>
-                                    <!-- </form> -->
-                                </div>                
+                                <div><button class="b1" style="font-size: 1em;background-color: green;" >Add to ideaboard</button></div>                
                             </centre>
                             </div>
                     <div class="back"> 
@@ -60,8 +56,8 @@
     </div>
   
     <div class="pagination">
-        <a href="{% url 'card' %}"style="margin-top:20px;">❮</a>
-        <a class="tab" href="{% url 'optimisation' %}" style="margin-top:20px;">❯</a>
+        <a href="{% url 'choice' %}"style="margin-top:20px;">❮</a>
+        <a class="tab" href="{% url 'empowerment' %}" style="margin-top:20px;">❯</a>
     </div>
 
     <div class="container">
@@ -77,7 +73,7 @@
                             <img src="{{index.image.url}}" alt="" width="250" height="150">
                     <div> <p style="color:black;"><b>{{index.question}}</b></p></div><br><br><br><br><br><br><br><br><br><br><br><br>                   
                             <centre>
-                                <div><button class="b1" style="font-size: 1em;" >Add to ideaboard</button></div>                
+                                <div><button class="b1" style="font-size: 1em;background-color: green;" >Add to ideaboard</button></div>                
                             </centre>
                             </div>
                     <div class="back"> 

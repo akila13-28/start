@@ -158,7 +158,8 @@ def host(request):
         description='The Magic element in the design process allows numerous user engagements and experiences; the resultant product is likely to be emotionally connected to the consumer (Chapman, 2005). Ezgihan Talay explored the idea of ‘Movement and Interactivity’ through using Nintendo Wii to update the experiential marbling art, the outcome of the movements is translated to the fabrics. This incorporated new technique allows anyone to easily alter the artwork by moving white-gloved hands')
     Post.objects.create(
         id=23,
-        catalog='Poetic',
+        catalog='Empowerment',
+        catagory='Poetic',
         image='e3.jpg',
         question='Can your design trigger memory as a poetic experience and evoke personal intimacy?',
         description='The poetic pattern can promote emotional bonds with the object which encourages on-going use, enduring values within products. This poetic element sustains the slow passing of time and an overall sensitivity to how fabrics and garments are actually used. Veasyble is a conceptual set of accessories that transform to create an intimate world for the wearer at a moment’s notice as symbolic representations, but contribute to the user’s experience of the world around them')
@@ -432,4 +433,47 @@ def choice(request):
     }
     print(choices)
     return render(request,'blog/choice.html',choices)
+def selection(request):
+    print("hi")
+    return None
+def optimisation(request):
+    choice = Post.objects.filter(catalog='Optimisation')
+    choices = {
+        'choice':choice[:5:],
+        'choice1':choice[5::],
+    }
+    print(choice)
+    return render(request,'blog/optimization.html',choices)
+def empowerment(request):
+    choice = Post.objects.filter(catalog='Empowerment')
+    choices = {
+        'choice':choice[:5:],
+        'choice1':choice[5::],
+    }
+    print(choices)
+    return render(request,'blog/empowerment.html',choices)
+def interaction(request):
+    choice = Post.objects.filter(catalog='Interaction')
+    choices = {
+        'choice':choice[:5:],
+        'choice1':choice[5::],
+    }
+    print(choices)
+    return render(request,'blog/interaction.html',choices)
+def persuasion(request):
+    choice = Post.objects.filter(catalog='persuasion')
+    choices = {
+        'choice':choice[:5:],
+        'choice1':choice[5::],
+    }
+    print(choices)
+    return render(request,'blog/persuasion.html',choices)
+def social_conversation(request):
+    choice = Post.objects.filter(catalog='Social Conversation')
+    choices = {
+        'choice':choice[:5:],
+        'choice1':choice[5::],
+    }
+    print(choices)
+    return render(request,'blog/socialconversation.html',choices)
 
